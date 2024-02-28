@@ -331,7 +331,7 @@ footer{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    background-image: url(/images/skate-about-section-bg.jpg);
+    background-image: url('/images/skate-about-section-bg.jpg');
     
 }
 #footer-bg-color{
