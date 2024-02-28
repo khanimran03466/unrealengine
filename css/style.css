@@ -1,0 +1,668 @@
+*,
+ul,
+html {
+    padding: 0;
+    margin: 0;
+    font-family: "Inter";
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #18181c;
+    padding: 1.25rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.hamburger {
+    cursor: pointer;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 0 15px;
+    display: none;
+}
+
+.hamburger .toggle-buton {
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    border-radius: 5px;
+}
+
+.hamburger .toggle-buton:before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff;
+    position: absolute;
+    top: -13px;
+    right: 0;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    border-radius: 5px;
+}
+
+.hamburger .toggle-buton:after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: -13px;
+    right: 0;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    border-radius: 5px;
+}
+
+.hamburger.active .toggle-buton {
+    background-color: transparent;
+}
+
+.hamburger.active .toggle-buton:before {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 13px;
+}
+
+.hamburger.active .toggle-buton:after {
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.logo img {
+    max-width: 233px;
+    width: 100%;
+    margin-right: 25px;
+}
+
+.logo-side {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none solid rgb(255, 255, 255);
+    font-size: 13px;
+    color: #aaaaae;
+}
+
+.icon-side {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #8c8a8b;
+    margin-left: 8rem;
+
+}
+
+.icon-side .icons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.fa-solid.fa-magnifying-glass,
+.fa-solid.fa-globe,
+.fa-regular.fa-user {
+    font-size: 20px;
+    color: #8c8a8b;
+}
+
+.fa-regular.fa-user {
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 15px;
+    background-color: #303034;
+}
+
+#download-btn {
+    background-color: #26bbff;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+
+
+.hero-banner {
+    position: relative;
+    width: 100vw;
+    height: 93vh;
+}
+
+.hero-banner video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+@media(min-aspect-ratio:16/9) {
+    .hero-banner video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media(max-aspect-ratio:16/9) {
+    .hero-banner video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-fit: none;
+    }
+}
+
+
+
+.video-text {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: Brutal_Light, "Open Sans", arial;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 74px;
+    letter-spacing: -1px;
+    margin: 0px;
+    color: #fff;
+}
+
+.video-text h1 {
+    font-size: 70px;
+}
+
+.video-text a {
+    letter-spacing: 2px;
+    font-size: 13px;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin-top: 50px;
+    color: inherit;
+    border-width: 2px;
+    border-style: solid;
+    border-color: initial;
+    border-image: radial-gradient(100% 185.14% at 100% 100%, rgb(52, 195, 255) 0%, rgb(51, 142, 238) 100%) 5 / 2px / 0 stretch;
+    text-decoration: none;
+    padding: 13px 20px;
+    display: inline-block;
+}
+
+.vertical-line {
+    width: 2px;
+    background-color: #fff;
+    height: 50px;
+    display: block;
+    margin-top: 30px;
+}
+
+
+.screen-view {
+    width: 100vw;
+    height: 100vh;
+}
+
+.about-us,
+.purchase {
+    background-image: url('../images/skate-about-section-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    background-attachment: fixed;
+}
+
+
+.about-us h2 {
+    font-size: 80px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.about-us p {
+    font-size: 24px;
+}
+
+p a {
+    color: #FCA00D;
+}
+
+.purchase {
+    background-image: url('../images/p-bg.png');
+    background-attachment: initial;
+
+}
+
+.community {
+    background: url('../images/skate-hero-medium-discord.png');
+    background-size: cover;
+    height: 435px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.community-left h2 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.community-left p {
+    font-size: 22px;
+}
+
+.community-left button {
+    font-size: 18px;
+    padding: 10px 40px;
+    background-color: #161616;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.community-left button img {
+    margin-left: 8px;
+    max-width: 20px;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-image: url(/images/skate-about-section-bg.jpg);
+    
+}
+#footer-bg-color{
+    background-color: #252525;
+    margin-top: 60px;
+}
+.footer-info{
+    width: 100%;
+    background-color: #252525;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 60px;
+    
+}
+.upper-div{
+   position: relative;
+}
+.footer-info ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-info ul li{
+    list-style-type: none;
+    margin-right: 30px;
+    font-size: 20px;
+    color: #535353;
+}
+
+.fa-brands.fa-facebook-f,
+.fa-brands.fa-x-twitter,
+.fa-brands.fa-instagram,
+.fa-brands.fa-twitch,
+.fa-brands.fa-discord,
+.fa-brands.fa-reddit-alien{
+     font-size: 25px;
+     margin-left: 20px;
+
+}
+.upper-div{
+    position: relative;
+}
+#skate{
+    position: absolute;
+    top: -140%;
+    left: 1%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.lower-div{
+    display: flex;
+    justify-content: space-between;
+    background-color: #252525;
+    color: white;
+    padding: 10px 60px;
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fa-solid.fa-microscope,
+.fa-solid.fa-copyright{
+    font-size: 28px;
+    margin-right: 40px;
+}
+.lower-div img{
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1200px) {
+    .logo img {
+        max-width: 150px;
+    }
+
+    nav ul li {
+        margin: 0 12px;
+    }
+
+    .video-text h1 {
+        font-size: 50px;
+    }
+
+    .about-us h2 {
+        font-size: 72px;
+    }
+
+    .about-us p {
+        font-size: 22px;
+    }
+
+    .community {
+        background-position: 65%;
+    }
+
+    .community-left h2 {
+        font-size: 42px;
+    }
+}
+
+
+@media (max-width: 992px) {
+
+    .icon-side {
+        width: auto;
+        margin-left: 0;
+    }
+
+    .icon-side .icons {
+        display: none;
+    }
+
+    .video-text h1 {
+        font-size: 40px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        flex-direction: column;
+        z-index: -1;
+        transition: .5s;
+    }
+
+    nav ul {
+        display: flex;
+        list-style-type: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 18px 0px;
+        padding: 10px;
+        width: 90%;
+        text-align: center;
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, .3);
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    nav.active {
+        left: 0;
+    }
+
+    body.active {
+        overflow: hidden;
+    }
+
+    .logo img {
+        max-width: 300px;
+    }
+
+    nav ul li {
+        margin: 10px 0px;
+        padding: 7px;
+        width: 50%;
+    }
+
+    .hamburger .toggle-buton:before {
+        top: -10px;
+    }
+
+    .hamburger .toggle-buton:after {
+        bottom: -10px;
+    }
+
+    .hamburger.active .toggle-buton:before {
+        top: 0;
+    }
+
+    .hamburger.active .toggle-buton:after {
+        bottom: 0;
+    }
+    
+}
+
+
+
+@media (max-width: 767px) {
+
+    .logo img {
+        max-width: 250px;
+    }
+
+    .community {
+        background-image: url('../images/skate-hero-medium-discord-mob.png');
+        background-position: top;
+        align-items: flex-end;
+        padding-bottom: 25px;
+        height: 640px;
+    }
+
+    .community-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .community-left h2 {
+        font-size: 24px;
+    }
+
+    .community-left p {
+        font-size: 17px;
+    }
+
+    nav ul li {
+
+        width: 80%;
+    }
+
+
+
+
+    .community {
+        height: 535px;
+    }
+
+    nav ul li {
+
+        width: 90%;
+    }
+
+    .about-us h2 {
+        font-size: 48px;
+        margin-bottom: 22px;
+    }
+
+    
+    .footer-info{
+        width: 100%;
+       display: flex;
+       flex-direction: column;
+       
+    }
+    .social-media{
+        margin-top: 30px;
+        margin-left: -12px;
+    }
+    .lower-div{
+        flex-direction: column;
+    }
+    .img{
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+
+
+@media (max-width: 376px) {
+
+    .hamburger {
+        width: 30px;
+        height: 30px;
+    }
+
+    .hamburger .toggle-buton,
+    .hamburger .toggle-buton:before,
+    .hamburger .toggle-buton:after {
+        height: 3px;
+    }
+
+    nav ul li {
+        margin: 10px 0px;
+        padding: 5px;
+    }
+
+    .community {
+        height: 400px;
+    }
+
+    .logo img {
+        max-width: 200px;
+    }
+
+    .video-text h1 {
+        font-size: 22px;
+    }
+
+    .about-us p {
+        font-size: 18px;
+    }
+    
+    .footer-info{
+        width: 100%;
+        padding: 5px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       
+    }
+    
+    .social-media{
+        margin-top: 30px;
+        
+    }
+    .lower-div{
+        flex-direction: column;
+    }
+    .img{
+        width: 100%;
+        margin-top: 20px;
+    }
+}
