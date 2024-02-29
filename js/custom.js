@@ -43,28 +43,28 @@ gsap.from(".video-text a",
 gsap.from(".vertical-line",
     {
         scrollTrigger: { trigger: ".vertical-line" },
-        xPercent: -100, left: "100%", opacity: 0,  duration: 2, force3D: true,
+        xPercent: -100, left: "100%", opacity: 0, duration: 2, force3D: true,
     });
 
 
 gsap.from(".about-h2", {
     scrollTrigger: { trigger: ".about-h2", toggleActions: "restart none none none" },
-    xPercent:-100, left:"100%", force3D:true, duration: 2
+    xPercent: -100, left: "100%", force3D: true, duration: 2
 }
 );
 
 
-gsap.from(".about-us p",
+gsap.from(".about-p",
     {
-        scrollTrigger: { trigger: ".about-us p" },
-        yPercent: -100, top: "100%", opacity: 0, duration: 2, force3D:true,
+        scrollTrigger: { trigger: ".about-p", toggleActions: "restart none none none" },
+        yPercent: -100, top: "100%", opacity: 0, duration: 2, force3D: true,
     });
 
 
 gsap.from(".community-left",
     {
         scrollTrigger: { trigger: ".community-left", toggleActions: "restart none none none" },
-        y: "-200%", opacity: 0, duration: 2
+        yPercent: -100, top: "100%", opacity: 0, duration: 3, force3D: true,
     });
 
 
