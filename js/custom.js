@@ -24,12 +24,50 @@ menuLi.forEach(el => {
 
 // Amination goes here.
 
-const timeline = gsap.timeline({ default: { duration: 1, ease: "bounce.out" } });
 
-timeline
-    .from(".video-text h1", { y: "-500%", delay: .5, opacity: 0 })
-    .from(".video-text a", { y: "-500%", delay: .5, opacity: 0 })
-    .from(".vertical-line", { x: "-500%", delay: .5, opacity: 0 })
-    .from(".about-us h2", { y: "500%", delay: .5, opacity: 0 })
-    .from(".about-us p", { y: "-500%", delay: .5, opacity: 0 })
-    .from(".community-left", { y: "-200%", delay: 2, opacity: 0 })
+gsap.registerPlugin(ScrollTrigger);
+
+
+gsap.from(".video-h1",
+    {
+        scrollTrigger: { trigger: ".video-h1" },
+        y: "-500%", opacity: 0, duration: 2
+    });
+
+gsap.from(".video-text a",
+    {
+        scrollTrigger: { trigger: ".video-text a" },
+        y: "-500%", opacity: 0, duration: 2
+    });
+
+gsap.from(".vertical-line",
+    {
+        scrollTrigger: { trigger: ".vertical-line" },
+        xPercent: -100, left: "100%", opacity: 0,  duration: 2, force3D: true,
+    });
+
+
+gsap.from(".about-h2", {
+    scrollTrigger: { trigger: ".about-h2", toggleActions: "restart none none none" },
+    xPercent:-100, left:"100%", force3D:true, duration: 2
+}
+);
+
+
+gsap.from(".about-us p",
+    {
+        scrollTrigger: { trigger: ".about-us p" },
+        yPercent: -100, top: "100%", opacity: 0, duration: 2, force3D:true,
+    });
+
+
+gsap.from(".community-left",
+    {
+        scrollTrigger: { trigger: ".community-left", toggleActions: "restart none none none" },
+        y: "-200%", opacity: 0, duration: 2
+    });
+
+
+
+
+
