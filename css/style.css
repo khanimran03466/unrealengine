@@ -327,36 +327,41 @@ p a {
     max-width: 20px;
 }
 
-footer{
+footer {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    background-image: url('/images/skate-about-section-bg.jpg');
+    background-image: url('../images/skate-about-section-bg.jpg');
     background-color: #000;
-    
+
 }
-#footer-bg-color{
+
+#footer-bg-color {
     background-color: #252525;
-    margin-top: 60px;
+    /* margin-top: 60px; */
 }
-.footer-info{
+
+.footer-info {
     width: 100%;
     background-color: #252525;
     color: #fff;
     display: flex;
     justify-content: space-between;
     padding: 10px 60px;
-    
+
 }
-.upper-div{
-   position: relative;
+
+.upper-div {
+    position: relative;
 }
-.footer-info ul{
+
+.footer-info ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.footer-info ul li{
+
+.footer-info ul li {
     list-style-type: none;
     margin-right: 30px;
     font-size: 20px;
@@ -368,40 +373,51 @@ footer{
 .fa-brands.fa-instagram,
 .fa-brands.fa-twitch,
 .fa-brands.fa-discord,
-.fa-brands.fa-reddit-alien{
-     font-size: 25px;
-     margin-left: 20px;
+.fa-brands.fa-reddit-alien {
+    font-size: 25px;
+    margin-left: 20px;
 
 }
-.upper-div{
+
+.upper-div {
     position: relative;
 }
-#skate{
-    position: absolute;
+
+#skate {
+    /* position: absolute; */
     top: -140%;
     left: 1%;
     font-size: 20px;
     font-weight: bold;
 }
 
-.lower-div{
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lower-div {
     display: flex;
     justify-content: space-between;
     background-color: #252525;
     color: white;
     padding: 10px 60px;
 }
-.icons{
+
+.icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .fa-solid.fa-microscope,
-.fa-solid.fa-copyright{
+.fa-solid.fa-copyright {
     font-size: 28px;
     margin-right: 40px;
 }
-.lower-div img{
+
+.lower-div img {
     margin-top: 10px;
 }
 
@@ -535,7 +551,7 @@ footer{
     .hamburger.active .toggle-buton:after {
         bottom: 0;
     }
-    
+
 }
 
 
@@ -590,26 +606,46 @@ footer{
         margin-bottom: 22px;
     }
 
-    
-    .footer-info{
+
+    .footer-info {
         width: 100%;
-       display: flex;
-       flex-direction: column;
-       
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+
     }
-    .social-media{
+
+    .social-media {
         margin-top: 30px;
         margin-left: -12px;
     }
-    .lower-div{
+
+    .lower-div {
         flex-direction: column;
+        padding-bottom: 20px;
     }
-    .img{
+
+    .img {
         width: 100%;
         margin-top: 20px;
     }
 }
 
+
+
+@media (max-width: 415px) {
+    .social-media i {
+        font-size: 20px;
+    }
+
+    .upper-div ul li {
+        font-size: 18px;
+    }
+
+    .community {
+        height: 460px;
+    }
+}
 
 
 @media (max-width: 376px) {
@@ -645,25 +681,30 @@ footer{
     .about-us p {
         font-size: 18px;
     }
-    
-    .footer-info{
+
+    .footer-info {
         width: 100%;
         padding: 5px;
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+
     }
-    
-    .social-media{
+
+    .social-media {
         margin-top: 30px;
-        
+
     }
-    .lower-div{
+
+    .lower-div {
         flex-direction: column;
     }
-    .img{
+
+    .img {
         width: 100%;
         margin-top: 20px;
     }
+
+
 }
